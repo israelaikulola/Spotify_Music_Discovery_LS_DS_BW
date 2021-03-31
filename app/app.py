@@ -28,10 +28,20 @@ def about():
 
 @app.route('/song_selection')
 def song_selection():
+    """
+    Inputs user's song of choice.
+    Moves user to recommendation page
+    """
     """Retrieves song selection"""
-    return "Enter a song:"
+    # Call model predict on song
+    song_title = request.values['song_title']
+
+    return render_template('song_title',
+                           song_title=song_title)
 
 @app.route('/recommendations')
 def recommendations():
-    """Returns song recommendations"""
-    return "Here are some more songs just like it!"
+    """
+    Returns song recommendations
+    """
+    return render_template('recommendations.html')

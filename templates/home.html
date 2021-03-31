@@ -1,23 +1,22 @@
 <!-- THIS WILL BE OUR HOME PAGE FOR THE APP -->
 
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Project Title
-        </title>
-        <link rel="stylesheet" href="https://unpkg.com/picnic">
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/entry.css') }}"/>
+</head>
 
-    <body>
-        <article class="flex two" style="padding: 3em 1em">
-            {%  block content %}
-                <div>
-                    <h1>
-                        Hello, World!
-                    </h1>
-                </div>
-            {% endblock %}
-        </article>
-    </body>
+  <div class="login">
+            <img src="static/images/codasong-4.png" style="width:200px;height:200px;">
+            <h1>Hi there! Welcome to codasong.</h1>
+            <h2>Ready to find some new music?</h2>
+            <p>Let's start with your name.</p>
+              <form id='namesubmit' action="/" method="post">
+                <input autocomplete="off" autofocus name="name" placeholder="Name" type="text"></input>
+                <input name='submit' type="submit"></input>
+              </form>
+  </div>
 </html>

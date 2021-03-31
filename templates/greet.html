@@ -1,0 +1,15 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/entry.css') }}"/>
+  </head>
+
+  <div class="login">
+      <img src="static/images/codasong-4.png" style="max-width:200px;height:auto;">
+        <h1>Hi, {{ name }}!</h1>
+        <p>Let's find you some new music.</p>
+        <a href="/music"><input type='submit' name='submit' value="GET STARTED"></input></a>
+  </div>
+</html>
